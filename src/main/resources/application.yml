@@ -1,0 +1,25 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: shortener
+  data:
+    mongodb:
+      database: shortener
+      host: localhost
+      port: 27017
+      username: shortener_api_user
+      password: ysoasmxmskmoIUGI
+      authentication-database: admin
+shortener:
+  urls:
+    lifeTimeSeconds: 8
+  counter:
+    rangeSize: 1000000000
+  zookeeper:
+    path: /shortener-counter
+zookeeper:
+  host: localhost
+logging:
+  level:
+    org.apache.zookeeper.ClientCnxn: WARN
